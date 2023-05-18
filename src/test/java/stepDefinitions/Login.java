@@ -26,13 +26,13 @@ public class Login {
 	 
 	}
 
-	@When("User enters valid emaail address {string}")
+	@When("User enters valid emaail address \"([^\"]*)\"$")
 	public void user_enters_valid_emaail_address(String emailText) {
 	   driver.findElement(By.name("email")).sendKeys("anuragshrivastava007@gmail.com");
 		
 	}
 
-	@When("User enter valid password {string}")
+	@When("User enter valid password \"([^\"]*)\"$")
 	public void user_enter_valid_password(String pwdText) {
 	   driver.findElement(By.name("password")).sendKeys("Password#23");
 	
@@ -50,12 +50,12 @@ public class Login {
 	    Assert.assertTrue((driver.findElement(By.linkText("Edit your account information")).isDisplayed()));
 	}
 
-	@When("User enters invalid emaail address {string}")
+	@When("User enters invalid emaail address \"([^\"]*)\"$")
 	public void user_enters_invalid_emaail_address(String string) {
 		driver.findElement(By.name("email")).sendKeys("string");
 	}
 
-	@When("User enter invalid password {string}")
+	@When("User enter invalid password \"([^\"]*)\"$")
 	public void user_enter_invalid_password(String pwd) {
 		 driver.findElement(By.name("password")).sendKeys("pwd");
 	}
