@@ -20,7 +20,6 @@ public class Login {
 	public void user_is_on_login_page() {
 		driver = DriverFactory.getDriver();
 		
-		
 		driver.findElement(By.xpath("//span[text() ='My Account'] ")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Login')]")).click();
 		
