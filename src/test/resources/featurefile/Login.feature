@@ -9,7 +9,7 @@ Then User should login successfully
 
 Scenario: Login with invalid credentials
 Given User is on login page
-When User enters invalid emaail address "email"
+When User enters invalid emaail address
 And User enter invalid password "1234"
 And User clicks on Login Button
 Then User should  not login successfully and see an error message 
